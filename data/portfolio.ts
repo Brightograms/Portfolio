@@ -6,7 +6,7 @@ export const profile = {
   location: "Lagos, Nigeria",
   email: "kalubright675@gmail.com",
   github: "https://github.com/Brightograms",
-  linkedin: "https://www.linkedin.com/in/bright-kalu",
+  linkedin: "https://www.linkedin.com/in/bright-kalu-b26880287/",
   twitter: "https://x.com/bright-kalu",
   resumeUrl: "#",
   Dp: "/profile.png",
@@ -28,6 +28,7 @@ export const about = {
 export type Project = {
   title: string;
   description: string;
+  image: string;
   tech: string[];
   liveUrl: string;
   repoUrl: string;
@@ -39,6 +40,7 @@ export const projects: Project[] = [
     description:
       "A full-stack web application for buying and selling cars. Users can create an account, List cars for sale, browse available listings, filter by what matters and make inquires about cars they are interested in by communicating with the seller directy through an email form in the app.",
     tech: ["Next.js", "TypeScript", "MongoDB", "Shadcn/UI", "Tailwind CSS"],
+    image: "/projects/AutoMarket.png",
     liveUrl: "https://automarket-gamma.vercel.app/",
     repoUrl: "https://github.com/Brightograms/AutoMarket",
   },
@@ -46,7 +48,8 @@ export const projects: Project[] = [
     title: "Calendar App",
     description:
       "A calendar application built on Fuse react, allowing users to create, edit, and delete events and has an authentication system. It features a responsive design and connects to a database for persistent event storage. Users can view their events in a monthly, weekly, or daily format.",
-    tech: ["React", "Next.Js", "Fuse React", "Tailwind CSS", "Material UI"],
+    tech: ["React", "Next.Js", "Fuse React", "Tailwind CSS", "Material UI", "Typescript"],
+    image: "/projects/calendarapp.png",
     liveUrl: "https://fuse-react-v160.vercel.app/apps/calendar",
     repoUrl: "https://github.com/Brightograms",
   },
@@ -54,6 +57,7 @@ export const projects: Project[] = [
     title: "Notes App",
     description:"An interactive note-taking application built on Fuse React, allowing users to create, edit, and delete notes. It features a responsive design and connects to a database for persistent note storage. Users can view their notes in a list or grid format. It also features a search functionality to quickly find specific notes based on keywords and users can set reminders for important notesand also archive irrelevant notes while being able to add labels to their notes.",
     tech: ["TypeScript", "React", "Next.Js", "Fuse React", "Tailwind CSS", "Material UI"],
+    image: "/projects/notesapp.png",
     liveUrl: "https://fuse-react-v160.vercel.app/apps/notes",
     repoUrl: "https://github.com/Brightograms",
   },
@@ -62,6 +66,7 @@ export const projects: Project[] = [
     description:
       "A machine learning model that predicts credit scoring based on customer demographics and financial history using Logistic Regression. it was built using Python and scikit-learn, and it was trained on a dataset of customer information. The model was evaluated using accuracy, precision, recall, and F1 score metrics, and it achieved an accuracy of 85%.",
     tech: ["Python", "scikit-learn", "Pandas", "NumPy", "Logistic Regression"],
+    image: "/projects/credit.png",
     liveUrl: "",
     repoUrl: "https://github.com/Brightograms/Credit-Score",
   },
@@ -74,7 +79,7 @@ export const skillGroups = [
   },
   {
     title: "Frontend",
-    skills: ["React", "Next.js", "HTML & CSS", "Tailwind CSS"],
+    skills: ["React", "Next.js", "HTML & CSS", "Tailwind CSS", "Shadcn/UI"],
   },
   {
     title: "Backend",
@@ -91,11 +96,11 @@ export const experience = [
   {
     role: "Full Stack Development Intern",
     company: "MarkLite",
-    period: "Summer 2025",
+    period: "2026",
     points: [
-      "Built and maintained React components for the company's internal dashboard.",
-      "Wrote my first unit tests and participated in daily standups and code reviews.",
-      "Fixed 20+ UI bugs and improved mobile responsiveness across the site.",
+      "Recieved Training on Fullstack Development and worked on real-world projects using React, Next.js, Node.js, Express.js, and MongoDB.",
+      "Assisted in Application testing of the RouteCTRL operator app and how it connects and communicates with the RouteCTRL Command Center, Customer Portal and general backend system and flow, ensuring functionality and performance in Real world usage",
+      "Built a full-stack migration validation dashboard for validating migrated RouteCTRL MongoDB customers collections by comparing document counts between the source and destination databases. The dashboard validates migration for a specific driver/account, compare expected and actual document counts, display PASS/FAIL status for each collection. Also icludes a dashboard summary that shows total collections, passed validations and failed validations.",
     ],
   },
 ];
@@ -103,7 +108,7 @@ export const experience = [
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
+  { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
