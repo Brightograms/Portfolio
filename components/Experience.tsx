@@ -50,6 +50,8 @@ export default function Experience() {
         <div className="mt-12 pl-10">
           <a
             href={profile.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-md border border-accent px-6 py-3 font-mono text-sm text-accent transition-colors hover:bg-accent/10"
           >
             View full résumé

@@ -8,13 +8,13 @@ export const profile = {
   github: "https://github.com/Brightograms",
   linkedin: "https://www.linkedin.com/in/bright-kalu-b26880287/",
   twitter: "https://x.com/bright-kalu",
-  resumeUrl: "#",
-  Dp: "/profile.png",
+  resumeUrl: "/resume.pdf",
+  Dp: "/profile.webp",
 };
 
 export const about = {
   paragraphs: [
-    "I am a Fullstack Developer and Computer Science student. I got into coding by building small projects, then harder projects and i have contributed to advanced real-world projects — every new project is a chance to learn something I couldn't do before.",
+    "I am a Fullstack Developer and Computer Science student. I got into coding by building small projects, then harder projects and i have contributed to advanced real-world projects, every new project is a chance to learn something I couldn't do before.",
     "So far I've worked mostly with JavaScript and TypeScript on the web: React and Next.js on the front end, Node.js and Express.Js for APIs and backend basics, and MongoDB, Azure CosmosDB and PostgreSQL for the database. I'm comfortable with tools like Git, Payload CMS, Azure Cosmos DB, Shadcn/UI, Figma,testing fundamentals, and deploying apps. I am open and excited to learn about new technologies and frameworks in order to increase my repetoire of skills and I'm currently deepening my understanding of data structures, algorithms, and system design.",
     "Asides building things for the web, i am also interested in Artificial Intelligence and Machine learning. Its one thing knowing how to build a software, but its another thing knowing how to make it super intelligent and future-proof."
   ],
@@ -108,7 +108,7 @@ export const experience = [
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];

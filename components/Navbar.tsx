@@ -47,6 +47,8 @@ export default function Navbar() {
           <li>
             <a
               href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-md border border-accent px-4 py-2 font-mono text-sm text-accent transition-colors hover:bg-accent/10"
             >
               Resume
