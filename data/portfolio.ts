@@ -7,7 +7,7 @@ export const profile = {
   email: "kalubright675@gmail.com",
   github: "https://github.com/Brightograms",
   linkedin: "https://www.linkedin.com/in/bright-kalu-b26880287/",
-  twitter: "https://x.com/bright-kalu",
+  twitter: "https://x.com/brightintech?s=11",
   resumeUrl: "/resume.pdf",
   Dp: "/profile.webp",
 };
