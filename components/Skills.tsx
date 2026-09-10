@@ -89,7 +89,7 @@ export default function Skills() {
           type="button"
           onClick={() => go(index - 1)}
           aria-label="Previous skill group"
-          className="absolute -left-2 top-[170px] -translate-y-1/2 rounded-full border border-foreground/10 bg-background/80 p-2.5 text-foreground/60 backdrop-blur-sm transition-all hover:border-accent/50 hover:text-accent sm:-left-4 sm:p-3"
+          className="absolute -left-2 top-[170px] hidden -translate-y-1/2 rounded-full border border-foreground/10 bg-background/80 p-2.5 text-foreground/60 backdrop-blur-sm transition-all hover:border-accent/50 hover:text-accent sm:-left-4 sm:flex sm:p-3"
         >
           <svg
             viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ export default function Skills() {
           type="button"
           onClick={() => go(index + 1)}
           aria-label="Next skill group"
-          className="absolute -right-2 top-[170px] -translate-y-1/2 rounded-full border border-foreground/10 bg-background/80 p-2.5 text-foreground/60 backdrop-blur-sm transition-all hover:border-accent/50 hover:text-accent sm:-right-4 sm:p-3"
+          className="absolute -right-2 top-[170px] hidden -translate-y-1/2 rounded-full border border-foreground/10 bg-background/80 p-2.5 text-foreground/60 backdrop-blur-sm transition-all hover:border-accent/50 hover:text-accent sm:-right-4 sm:flex sm:p-3"
         >
           <svg
             viewBox="0 0 24 24"
