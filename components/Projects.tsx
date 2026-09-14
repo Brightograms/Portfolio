@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { projects } from "@/data/portfolio";
 import Section from "./Section";
 
@@ -36,6 +36,21 @@ const AUTOPLAY_MS = 4500;
 export default function Projects() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+
+  // Swipe handling (mobile — arrows are hidden there)
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(delta) < 50) return; // ignore small movements
+    if (delta < 0) go(index + 1); // swiped left → next
+    else go(index - 1); // swiped right → previous
+  };
 
   useEffect(() => {
     if (paused) return;
@@ -55,6 +70,8 @@ export default function Projects() {
         className="relative"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
       >
         {/* Slides track */}
         <div className="overflow-hidden">
@@ -133,7 +150,7 @@ export default function Projects() {
           type="button"
           onClick={() => go(index - 1)}
           aria-label="Previous project"
-          className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full border border-foreground/10 bg-background/80 p-3 text-foreground/60 backdrop-blur-sm transition-all hover:border-accent/50 hover:text-accent sm:-left-4"
+          className="absolute left-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-foreground/10 bg-background/80 p-3 text-foreground/60 backdrop-blur-sm transition-all hover:border-accent/50 hover:text-accent sm:-left-4 sm:flex"
         >
           <svg
             viewBox="0 0 24 24"
@@ -152,7 +169,7 @@ export default function Projects() {
           type="button"
           onClick={() => go(index + 1)}
           aria-label="Next project"
-          className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full border border-foreground/10 bg-background/80 p-3 text-foreground/60 backdrop-blur-sm transition-all hover:border-accent/50 hover:text-accent sm:-right-4"
+          className="absolute right-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-foreground/10 bg-background/80 p-3 text-foreground/60 backdrop-blur-sm transition-all hover:border-accent/50 hover:text-accent sm:-right-4 sm:flex"
         >
           <svg
             viewBox="0 0 24 24"
