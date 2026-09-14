@@ -1,10 +1,22 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Light theme (default) */
 :root {
+  --background: #fafafa;
+  --foreground: #171717;
+  --accent: #059669;
+  --grid-line: rgb(0 0 0 / 0.05);
+  --scrollbar-thumb: #c9c9c9;
+}
+
+/* Dark theme */
+.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
   --accent: #34d399;
+  --grid-line: rgb(255 255 255 / 0.04);
+  --scrollbar-thumb: #3a3a3a;
 }
 
 @theme inline {
@@ -30,7 +42,7 @@ section[id] {
 
 ::selection {
   background: var(--accent);
-  color: #0a0a0a;
+  color: var(--background);
 }
 
 ::-webkit-scrollbar {
@@ -38,23 +50,19 @@ section[id] {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: var(--scrollbar-thumb);
   border-radius: 8px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3a;
-}
-
-/* Subtle background grid + glow behind the hero */
+/* Subtle background grid behind the hero */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
 }

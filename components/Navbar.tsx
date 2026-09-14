@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { navLinks, profile } from "@/data/portfolio";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -44,6 +45,9 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+          <li className="flex items-center">
+            <ThemeToggle />
+          </li>
           <li>
             <a
               href={profile.resumeUrl}
@@ -56,30 +60,33 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Mobile hamburger */}
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
-        >
-          <span
-            className={`h-0.5 w-6 bg-foreground transition-transform ${
-              open ? "translate-y-2 rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`h-0.5 w-6 bg-foreground transition-opacity ${
-              open ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`h-0.5 w-6 bg-foreground transition-transform ${
-              open ? "-translate-y-2 -rotate-45" : ""
-            }`}
-          />
-        </button>
+        {/* Mobile: theme toggle + hamburger */}
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5"
+          >
+            <span
+              className={`h-0.5 w-6 bg-foreground transition-transform ${
+                open ? "translate-y-2 rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`h-0.5 w-6 bg-foreground transition-opacity ${
+                open ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`h-0.5 w-6 bg-foreground transition-transform ${
+                open ? "-translate-y-2 -rotate-45" : ""
+              }`}
+            />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
