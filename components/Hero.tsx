@@ -55,7 +55,7 @@ export default function Hero() {
           <p className="mt-8 max-w-xl leading-relaxed text-foreground/60">
             {profile.role} based in {profile.location}. I specialize in
             building modern web applications from pixel-perfect interfaces
-            to scalable backend systems.
+            to scalable backend systems. I build Software and break it to make it safer and more secure.
           </p>
         </Reveal>
         <Reveal delay={400}>

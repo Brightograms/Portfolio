@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bright Kalu — Software Developer",
+  title: " Bright Kalu ",
   description:
     "Portfolio of Bright Kalu, a junior software developer and computer science student building things for the web.",
 };
